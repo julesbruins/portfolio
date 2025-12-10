@@ -1,0 +1,99 @@
+@font-face {
+    font-family: "anton";
+    src: url(/assets/fonts/anton.ttf);
+}
+@font-face {
+    font-family: "andika";
+    src: url(/assets/fonts/Andika-Regular.ttf);
+}
+@font-face {
+    font-family: "instrument-serif";
+    src: url(/assets/fonts/instrumentserif-regular.ttf);
+}
+@font-face {
+    font-family: "instrument-serif-italic";
+    src: url(/assets/fonts/instrumentserif-italic.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-font: "anton";
+    --secondary-font: "andika";
+    --tertiary-font: "instrument-serif";
+    --quaternary-font: "instrument-serif-italic";
+
+    color-scheme: light dark;
+    --primary-color: light-dark(hsl(33, 18%, 88%), hsl(36, 49%, 10%));
+    --secondary-color: light-dark(hsl(36, 49%, 10%), hsl(33, 18%, 88%));
+
+    --ease: ease-out
+
+}
+
+body {
+    background-color: var(--primary-color);
+    padding: 1rem;
+}
+
+h1, 
+.xl {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+}
+h2,
+.lg {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+}
+h3,
+.md {
+    font-size: clamp(1.5rem, 4vw, 2rem)
+}
+p {
+    max-width: 65ch;
+    line-height: 1.5;
+}
+
+
+
+
+
+
+h1, h1, p, a {
+    color: var(--secondary-color);
+}
+
+h1, h2 {
+    font-family: var(--primary-font);
+    letter-spacing: 0.02em;
+}
+p, a {
+    font-family: var(--secondary-font);
+}
+
+ul {
+    list-style-type: none;
+}
+a {
+    text-decoration: none;
+}
+
+ul.projects-ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5rem;
+
+    li {
+        width: 50vw;
+
+        img {
+            width: 100%;
+            border-radius: 1em;
+            border: 1px solid var(--secondary-color);
+        }
+    }
+}

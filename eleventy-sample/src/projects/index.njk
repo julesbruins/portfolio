@@ -1,0 +1,25 @@
+---
+title: portfolio
+layout: _layouts/base.njk
+---
+
+{% block head %}
+  <link rel="stylesheet" href="/assets/css/projects.css">
+{% endblock %}
+
+<h1>Projecten</h1>
+
+<ul class="projects-ul">
+{% for project in collections.projects %}
+  <li>
+    <h2>{{ project.data.title }}</h2>
+    {# <p>{{ project.data.description }}</p> #}
+
+    {% if project.data.image %}
+      <img src="{{ project.data.image }}" alt="{{ project.data.title }}">
+    {% endif %}
+
+    <a href="{{ project.url }}">Bekijk project →</a>
+  </li>
+{% endfor %}
+</ul>

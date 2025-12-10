@@ -1,0 +1,14 @@
+
+ul {
+    display: flex;
+    gap: 2rem;
+    overflow-x: scroll;
+
+    li {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+        width: 25rem;
+    }
+}

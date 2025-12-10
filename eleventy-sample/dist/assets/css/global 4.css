@@ -1,0 +1,22 @@
+@font-face {
+    font-family: "anton";
+    src: url(/eleventy-sample/src/assets/fonts/anton.ttf);
+}
+@font-face {
+    font-family: "instrument-serif";
+    src: url(/eleventy-sample/src/assets/fonts/instrumentserif-regular.ttf);
+}
+@font-face {
+    font-family: "instrument-serif-italic";
+    src: url(/eleventy-sample/src/assets/fonts/instrumentserif-italic.ttf);
+}
+
+:root {
+    --primary-font: "anton";
+    --secondary-font: "instrument-serif";
+    --tertiary-font: "instrument-serif-italic";
+}
+
+h1 {
+    font-family: var(--primary-font);
+}
