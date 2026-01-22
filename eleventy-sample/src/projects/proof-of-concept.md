@@ -1,7 +1,7 @@
 ---
 title: "Citysprout voor fresk.digital"
 # description: "Bouw en ontwerp een website voor het ficiteve bedrijf Citysprout en gebruik hierbij data"
-image: "/assets/images/citysprout-M.avif"
+image: "/assets/images/citysprout-M.png"
 tags: project
 layout: _layouts/base.njk
 year: 2025
