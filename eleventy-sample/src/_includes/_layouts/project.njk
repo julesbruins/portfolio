@@ -1,0 +1,32 @@
+---
+layout: _layouts/base.njk
+---
+
+{% block head %}
+  <link rel="stylesheet" href="/assets/css/projects.css">
+{% endblock %}
+
+<article>
+    <h1>{{ title }}</h1>
+    {{ content | safe }}
+
+    {% if videos %}
+    <h2>Demo's van de site</h2>
+    <div class="project-videos">
+        {% for video in videos %}
+        <video controls height="350">
+            <source src="{{ video }}" type="video/mp4" />
+        </video>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if images %}
+    <h2>Responsive ontwerp</h2>
+    <div class="project-images">
+        {% for img in images %}
+            <img src="{{ img }}" alt="Website voor {{ title }}">
+        {% endfor %}
+    </div>
+    {% endif %}
+</article>

@@ -69,6 +69,7 @@ nav {
     }
 }
 
+
 @container sticky-nav scroll-state(stuck: top) {
     ul {
         border-radius: 1rem;

@@ -1,0 +1,106 @@
+/* HEADER KLEINER BIJ SCROLL */
+header {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+
+    h1 {
+        align-self: end;
+    }
+    p {
+        align-self: start;
+    }
+}
+
+.inner {
+    position: sticky;
+    top: 0;
+    container-name: sticky-heading;
+	container-type: scroll-state;
+
+    h1, p {
+		transition: transform 0.5s var(--ease);
+	}
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	@container sticky-heading scroll-state(stuck: top) {
+		h1, p {
+			transition: transform 0.5s var(--ease);
+			transform: scale(0.7);
+		}
+    }
+}
+
+
+/* NAV STICKY EN HEADER WEG */
+nav {
+    position: sticky;
+    top: 0;
+    container-name: sticky-nav;
+    container-type: scroll-state;
+    padding-bottom: 3rem;
+    z-index: 10;
+
+    ul {
+        display: flex;
+        justify-content: space-between;
+        padding: .5rem 1rem;
+        background-color: var(--secondary-color);
+        transition: border-radius 0.4s ease-out;
+
+        li {
+            padding: .25rem 1rem;
+        }
+        li:hover {
+            background-color: var(--primary-color);
+            border-radius: .75rem;
+
+            a {
+                color: var(--secondary-color);
+            }
+        }
+
+        a {
+            color: var(--primary-color);
+        }
+    }
+}
+
+@container sticky-nav scroll-state(stuck: top) {
+    ul {
+        border-radius: 1rem;
+    }
+}
+
+
+/* PROJECTEN ANIMATIES OPACITY */
+ul.projects-ul {
+    li {
+        height: auto;
+        opacity: 0;
+
+        animation: fadeInOut linear;
+        animation-timeline: view();
+        animation-range: entry 20% exit 80%;   
+    }
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+

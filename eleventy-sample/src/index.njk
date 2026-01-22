@@ -25,7 +25,7 @@ layout: _layouts/base.njk
         </nav>
 
         <ul class="projects-ul">
-            {% for project in collections.projects %}
+            {% for project in collections.projects | reverse %}
             <li>
                 <h2>{{ project.data.title }}</h2>
                 {# <p>{{ project.data.description }}</p> #}
